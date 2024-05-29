@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="build/index.js" defer></script>
+  <title>Form Submission</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      color: #212121;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>Form Submission</h1>
+  <form id="add-person-form" onsubmit="checkPerson(event);">
+    <legend>Add new person:</legend>
+    <br>
+    <label for="person-name">Person:</label>
+    <input id="person-name" type="text" name="person-name" />
+
+    <label for="drink-name">Drink:</label>
+    <input id="drink-name" type="text" name="drink-name" />
+
+    <input id="submit-btn" type="submit" value="Submit"> 
+  </form>
+  <p id="input-error-message" style="display: none; color: red;">Invalid person and/or drink</p>
+</body>
+
+</html>

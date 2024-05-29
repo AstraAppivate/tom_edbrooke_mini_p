@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+  <script src="build/index.js" defer></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      color: #212121;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>Form Validation</h1>
+  <form id="send-message-form" action="/addperson" method="post">
+    <label for="person-name">Person:</label>
+    <input id="person-name" type="text" name="person-name" />
+
+    <label for="subject">Subject:</label>
+    <input id="subject" type="text" name="subject" />
+
+    <label for="message">Message:</label>
+    <input id="message" type="text" name="message" />
+
+    <input id="submit-btn" type="button" value="Submit">
+    
+  </form>
+  <p id="error-message" style="display: none; color: red;">Please enter a value for all fields</p>
+</body>
+
+</html>
