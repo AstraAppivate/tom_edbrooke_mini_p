@@ -1,0 +1,29 @@
+body {
+    background-color: tan;
+}
+
+.instructions {
+    width: 200px; 
+}
+
+.marks-box {
+    width: 100px; 
+    height: 100px; 
+    background-color: rgb(175, 73, 73); 
+    border: 3px solid rgb(170, 170, 57); 
+    padding: 50px;
+    margin: 0 auto;
+}
+
+.marks-box, .instructions {
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1000px) {
+    body { background-color: pink; }
+    .marks-box { padding: 30px; }
+}
+@media screen and (max-width: 600px) {
+    body { background-color: lightblue; }
+    .marks-box { padding: 10px; }
+}

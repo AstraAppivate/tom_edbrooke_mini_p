@@ -2,21 +2,34 @@
 
 <html lang="en">
     <head>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
       <link rel="stylesheet" href="css_intro.css"/>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <script src="intro_lesson.js" defer></script> 
+
     </head>
+    <title>Document</title>
         <h1>
             AHOY - WELCOME TO THE BLOODBOWL CHEATSHEET
         </h1>
         
     <img src="banner_pic.jpeg" alt="Blood Bowl Logo" class="center">
 
-    <button id="btn">Click Me!!</button> 
-
     <body>
+
+      <div class="container">
+        <h3>Popover Example</h3>
+        <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>
+      </div>
+      
+      <script>
+      $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();   
+      });
+      </script>
         
         <p> Source: <a href="https://mordorbihan.fr/en/bloodbowl/skills/2020">Link </a> </p>
 
@@ -138,9 +151,6 @@
             Blood Bowl Probabilities
           </h2>
 
-
-
-          
     </body>
 </html>
 

@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(51, 109, 109);
+}
+
+.marks-box {
+    width: 100px; 
+    height: 100px; 
+    background-color: rgb(175, 73, 73); 
+    border: 3px solid rgb(170, 170, 57); 
+    margin: auto;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: DodgerBlue;
+}
+
+.my-data {
+    width: 200px; 
+    height: 100px; 
+    border: 1px solid black;
+}
