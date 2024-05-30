@@ -6,12 +6,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <script src="intro_lesson.js" defer></script> 
     </head>
         <h1>
             AHOY - WELCOME TO THE BLOODBOWL CHEATSHEET
         </h1>
         
     <img src="banner_pic.jpeg" alt="Blood Bowl Logo" class="center">
+
+    <button id="btn">Click Me!!</button> 
 
     <body>
         
@@ -21,11 +24,31 @@
           <li><a href="https://mordorbihan.fr/en/bloodbowl/skills/2020">Website</a></li>
         </ul>
 
+
+        <h1>Form Submission</h1>
+        <form id="add-person-form" onsubmit="checkPerson(event);">
+          <legend>Submit favorite skill:</legend>
+          <br>
+          <label for="person-name">Person:</label>
+          <input id="person-name" type="text" name="person-name" />
+      
+          <label for="skill-name">Skill:</label>
+          <input id="skill-name" type="text" name="skill-name" />
+      
+          <input id="submit-btn" type="submit" value="Submit"> 
+        </form>
+        <p id="input-error-message" style="display: none; color: red;">Invalid person and/or drink</p>
+
+
+
+
+
+
         <h2 class="make-brown">
           General Skills
         </h2>
 
-         <table>
+         <table id="tableID">
 
             <tr>
               <th style="width:10%"> Skill Name</th>
