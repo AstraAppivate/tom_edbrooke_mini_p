@@ -17,6 +17,7 @@ export function takeTurn(rowIndex: number, columnIndex: number,
 export function switchPlayer(currentPlayer: Player): Player {
   console.log('Switch player called. Current player is', currentPlayer)
   return undefined
+
 }
 
 // Return either 'nought', 'cross' or 'nobody' if the game is over.
@@ -24,6 +25,7 @@ export function switchPlayer(currentPlayer: Player): Player {
 export function checkWinner(currentBoard: Cell[][]): Player {
   console.log('checkWinner was called') // keep this line here
   return undefined
+
 }
 
 // Set the game state back to its original state to play another game.
