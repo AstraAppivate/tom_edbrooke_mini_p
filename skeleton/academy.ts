@@ -7,8 +7,11 @@ export const crossText = 'cross'
 export const nobodyText = 'nobody'
 
 // Take the row and column number between 0 and 2 (inclusive) and update the game state.
-export function takeTurn(rowIndex: number, columnIndex: number,
+export function takeTurn(rowIndex: number, columnIndex: number,                                         // This function takes in all these parameters with annotation setting the types.  
   currentGameOver: boolean, currentBoard: Cell[][], currentPlayer: Player): Cell[][] {
+
+
+
   console.log(`takeTurn was called with row: ${rowIndex}, column: ${columnIndex}`) // keep this line 
 
   return getBoard()
