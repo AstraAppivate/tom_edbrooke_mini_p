@@ -3,21 +3,21 @@
 export type Player = 'nought' | 'cross' | 'nobody' | undefined
 export type Cell = number | Player | null
 
-const board:Cell [][]=[["cross", null, null],[null, null, null],[null, null, null]]
+let board:Cell [][]=[["cross", null, null],[null, null, null],[null, null, null]]
 
 
 // Return the current board state with either a noughtText or a crossText in
 // each position. Put a null in a position that hasn't been played yet.
 
-//grab the board
-export function getBoard(): Cell[][] {
+//retrieve the board
+export function getBoard(): Cell[][] { //colon shows it's returning a 2D array as it's after the function
   console.log('getBoard was called!!!!!')
-return getBoard()
+return board
 }
 
-//write board based on player input
+//overwrite board with new board
 export function setBoard(newBoard: Cell[][]) {
 
-
+  board = newBoard
   console.log('setBoard was called')
 }

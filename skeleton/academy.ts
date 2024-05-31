@@ -11,7 +11,7 @@ export function takeTurn(rowIndex: number, columnIndex: number,
   currentGameOver: boolean, currentBoard: Cell[][], currentPlayer: Player): Cell[][] {
   console.log(`takeTurn was called with row: ${rowIndex}, column: ${columnIndex}`) // keep this line 
 
-  return []
+  return getBoard()
 }
 
 export function switchPlayer(currentPlayer: Player): Player {
