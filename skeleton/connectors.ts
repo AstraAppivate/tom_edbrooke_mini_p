@@ -1,7 +1,7 @@
 // This file contains helper code beyond the first week 'Intro to JavaScript' course content.
 // You should not have to make any changes in this file to get your game working.
 
-import { Player, Cell, getBoard, setBoard } from './board' // imports board state from board
+import { Player, Cell, getBoard, setBoard } from './board'
 
 import { checkWinner, crossText, getCurrentPlayer, getGameOver, noughtText, resetGame, setCurrentPlayer, switchPlayer, takeTurn, nobodyText } from './academy'
 
@@ -43,7 +43,7 @@ function isValidColumn(columnArray: Cell[]) {
 }
 
 // A grid position was clicked call the game's turn function, redraw and then check for a winner.
-function positionClick(row: number, column: number) { //stuff is triggered by this. This is where the game is played
+function positionClick(row: number, column: number) {
   console.log(`positionClick was called with rowIndex=${row}, columnIndex=${column},`)
   //row, column, currentGameOver, currentBoard, currentPlayer
   const board = takeTurn(row, column, getGameOver(), getBoard(), getCurrentPlayer())

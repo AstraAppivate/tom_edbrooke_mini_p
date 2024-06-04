@@ -3,7 +3,7 @@
 export type Player = 'nought' | 'cross' | 'nobody' | undefined
 export type Cell = number | Player | null
 
-let board:Cell [][]=[["cross", null, null],[null, null, null],[null, null, null]]
+let board:Cell[][] = []
 
 
 // Return the current board state with either a noughtText or a crossText in

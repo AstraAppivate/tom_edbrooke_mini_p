@@ -6,27 +6,24 @@ export const noughtText = 'nought'
 export const crossText = 'cross'
 export const nobodyText = 'nobody'
 
-let currentGameOver: boolean = false 
 
-currentBoard = getBoard(board)
 
 // Take the row and column number between 0 and 2 (inclusive) and update the game state.
-// grab clicked input and set to current player
-// find where take turn is being important 
-export function takeTurn(rowIndex: number, columnIndex: number,                                         // This function takes in all these parameters with annotation setting the types.  
+export function takeTurn(rowIndex: number, columnIndex: number,
   currentGameOver: boolean, currentBoard: Cell[][], currentPlayer: Player): Cell[][] {
 
-  console.log(`takeTurn was called with row: ${rowIndex}, column: ${columnIndex}`) // keep this line
-  
+  console.log(currentBoard)
+  currentBoard[rowIndex][columnIndex] = currentPlayer
 
-  
+
+
+  console.log(`takeTurn was called with row: ${rowIndex}, column: ${columnIndex}`) // keep this line 
   return currentBoard
 }
 
 export function switchPlayer(currentPlayer: Player): Player {
   console.log('Switch player called. Current player is', currentPlayer)
   return undefined
-
 }
 
 // Return either 'nought', 'cross' or 'nobody' if the game is over.
@@ -34,7 +31,6 @@ export function switchPlayer(currentPlayer: Player): Player {
 export function checkWinner(currentBoard: Cell[][]): Player {
   console.log('checkWinner was called') // keep this line here
   return undefined
-
 }
 
 // Set the game state back to its original state to play another game.
