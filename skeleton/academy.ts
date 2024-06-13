@@ -14,8 +14,7 @@ let currentPlayer:Player = undefined
 // Take the row and column number between 0 and 2 (inclusive) and update the game state.
 export function takeTurn(rowIndex: number, columnIndex: number,
   currentGameOver: boolean, currentBoard: Cell[][], currentPlayer: Player): Cell[][] {
-
-  if (currentGameOver == false){
+  if (currentGameOver == false){ 
     currentBoard[rowIndex][columnIndex] = currentPlayer
     }
   console.log(`takeTurn was called with row: ${rowIndex}, column: ${columnIndex}`) // keep this line 
@@ -30,10 +29,11 @@ export function switchPlayer(currentPlayer: Player): Player {
     currentPlayer = "cross"
   }
   else {currentPlayer = "nought"}
+
   console.log('Switch player called. Current player is', currentPlayer)
+
   return currentPlayer
 }
-
 // Return either 'nought', 'cross' or 'nobody' if the game is over.
 // Otherwise return null to continue playing.
 export function checkWinner(currentBoard: Cell[][]): Player {
@@ -47,9 +47,7 @@ export function checkWinner(currentBoard: Cell[][]): Player {
 
 
 export function resetGame() {
-
-
-
+  currentPlayer = "cross"
   console.log('resetGame was called') // keep this line here
 }
 
