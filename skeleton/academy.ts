@@ -8,19 +8,25 @@ export const crossText = 'cross'
 export const nobodyText = 'nobody'
 
 let currentGameOver = false
-let currentPlayer:Player = undefined
-
+let currentPlayer:any= undefined
 
 // Take the row and column number between 0 and 2 (inclusive) and update the game state.
 export function takeTurn(rowIndex: number, columnIndex: number,
   currentGameOver: boolean, currentBoard: Cell[][], currentPlayer: Player): Cell[][] {
-  if (currentGameOver == false){ 
-    currentBoard[rowIndex][columnIndex] = currentPlayer
-    }
-  console.log(`takeTurn was called with row: ${rowIndex}, column: ${columnIndex}`) // keep this line 
 
+    if (currentBoard[rowIndex][columnIndex] != null){
+      return currentBoard
+    }
+    
+    else {
+    if (currentGameOver == false){ 
+      currentBoard[rowIndex][columnIndex] = currentPlayer
+    }
+  }
+
+  console.log(`takeTurn was called with row: ${rowIndex}, column: ${columnIndex}`) // keep this line 
   return currentBoard
-}
+  }
 
 // Switches and sets player to alternate between "nought" and "cross"
 export function switchPlayer(currentPlayer: Player): Player {
@@ -34,9 +40,11 @@ export function switchPlayer(currentPlayer: Player): Player {
 
   return currentPlayer
 }
+
 // Return either 'nought', 'cross' or 'nobody' if the game is over.
 // Otherwise return null to continue playing.
 export function checkWinner(currentBoard: Cell[][]): Player {
+
 
   
   console.log('checkWinner was called') // keep this line here
@@ -44,8 +52,6 @@ export function checkWinner(currentBoard: Cell[][]): Player {
 }
 
 // Set the game state back to its original state to play another game.
-
-
 export function resetGame() {
   currentPlayer = "cross"
   console.log('resetGame was called') // keep this line here
