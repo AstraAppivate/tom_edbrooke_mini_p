@@ -11,7 +11,7 @@ let currentGameOver = false
 let currentPlayer:any= undefined
 
 
-// Take the row and column number between 0 and 2 (inclusive) and update the game state.
+// Take the row and column number and update the game state.
 export function takeTurn(rowIndex: number, columnIndex: number,
   currentGameOver: boolean, currentBoard: Cell[][], currentPlayer: Player): Cell[][] {
 
@@ -19,12 +19,11 @@ export function takeTurn(rowIndex: number, columnIndex: number,
       return currentBoard
     }
     
-    else {
-    if (currentGameOver == false){ 
+    else if
+    (currentGameOver == false){ 
       currentBoard[rowIndex][columnIndex] = currentPlayer
     }
-  }
-
+  
   console.log(`takeTurn was called with row: ${rowIndex}, column: ${columnIndex}`) // keep this line 
   return currentBoard
   }
@@ -45,6 +44,8 @@ export function switchPlayer(currentPlayer: Player): Player {
 // Return either 'nought', 'cross' or 'nobody' if the game is over.
 // Otherwise return null to continue playing.
 export function checkWinner(currentBoard: Cell[][]): Player {
+
+//assumes n*n shape board
 const n = currentBoard.length
 
 //check rows and columns
@@ -93,26 +94,15 @@ let antiDiagonalWin = true;
       return currentBoard[0][n - 1] as Player;
   }
 
-
 // check for null
-let hasNull = true;
-
-// Iterate over the rows
-for (let i = 0; i < currentBoard.length; i++) {
-  // Iterate over cols
-  for (let j = 0; j < currentBoard[i].length; j++) {
-    // Check if the current element is null
-    if (currentBoard[i][j] != null) {
-      hasNull = false;
-      break; // Exit the inner loop
-    }
+  let hasNullValues = (currentBoard:Cell[][]):boolean => {
+    return currentBoard.some(row => row.some (cell => cell === null))
+  }
+  if (hasNullValues(currentBoard) == false) {
+    return "nobody"
+  }
+  console.log("checkWinner was called")
 }
-}
-
-console.log("checkWinner was called")
-return undefined
-}
-
 
 // Set the game state back to its original state to play another game.
 export function resetGame() {

@@ -16,7 +16,6 @@ return board
 
 //overwrite board with new board
 export function setBoard(newBoard: Cell[][]) {
-
   board = newBoard
   console.log('setBoard was called')
 }
