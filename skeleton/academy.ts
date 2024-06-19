@@ -8,7 +8,7 @@ export const crossText = 'cross'
 export const nobodyText = 'nobody'
 
 let currentGameOver = false
-let currentPlayer:any= undefined
+let currentPlayer:any = undefined
 
 
 // Take the row and column number and update the game state.
@@ -106,6 +106,7 @@ let antiDiagonalWin = true;
 
 // Set the game state back to its original state to play another game.
 export function resetGame() {
+  setBoard([[null, null, null], [null, null, null], [null, null, null]])
   currentPlayer = "cross"
   console.log('resetGame was called') // keep this line here
 }
